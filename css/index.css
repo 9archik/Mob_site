@@ -38,10 +38,14 @@
 	font-style: normal;
 }
 
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	color: white;
+	font-family: 'Futura';
+	list-style: none;
 }
 html {
 	height: 100%;
@@ -90,7 +94,6 @@ body {
 	margin: 10px 0 0 0;
 	z-index: 1;
 }
-
 
 .menu {
 	align-items: center;
@@ -262,6 +265,20 @@ body {
 	letter-spacing: 3px;
 	max-width: 100%;
 	overflow: hidden;
+}
+
+.parallax-block {
+	overflow: hidden;
+}
+
+.mask-parallax {
+	transform: translateY(-50px);
+	display: block;
+	transition: 1s;
+}
+
+.mask-parallax.active {
+	transform: translateY(0);
 }
 
 .event__text-parallax {

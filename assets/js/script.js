@@ -95,3 +95,29 @@ window.addEventListener('load', () => {
 		indexDate = indexDate + 1;
 	}
 });
+
+const partnershipParallax = () => {
+	const parallaxElements = document.getElementsByClassName('parallax-scale');
+	const rectParallaxElems = [];
+	console.log(parallaxElements.length);
+	for (let i = 0; i < parallaxElements.length; i++) {
+		rectParallaxElems.push(parallaxElements[i].getBoundingClientRect());
+	}
+	console.log(rectParallaxElems, parallaxElements)
+
+	for (let i = 0; i < rectParallaxElems.length; i++) {
+		
+		if (rectParallaxElems[i] && rectParallaxElems[i].y - window.pageYOffset - window.innerHeight < 0) {
+			console.log(parallaxElements[i])
+			parallaxElements[i].classList.add('end');
+		}
+	}
+};
+
+window.addEventListener('load', () => {
+	partnershipParallax();
+});
+
+window.addEventListener('scroll', () => {
+	partnershipParallax();
+});
