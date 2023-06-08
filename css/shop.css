@@ -1,0 +1,21 @@
+@import url("index.css");
+
+.soon
+{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.soon__text
+{
+    color: black;
+    width:50%;
+    padding:150px 0;
+    font-size: 48px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 35px rgb(0 0 0 / 15%);
+}
